@@ -1,0 +1,1 @@
+SELECT name, room_id FROM course WHERE start_time ORDER BY start_time ASC;
