@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `mydb`.`Oscar` (
+  `movie_id` INT(11) NOT NULL,
+  `person_id` INT(11) NOT NULL,
+  `type` VARCHAR(255) NOT NULL,
+  `year` YEAR NOT NULL,
+  `Person_id` INT(11) NOT NULL,
+  `Movie_id` INT(11) NOT NULL,
+  `Movie_Oscar_movie_id` INT(11) NOT NULL,
+  `Movie_Oscar_person_id` INT(11) NOT NULL,
+  `Movie_Director_director_id` INT(11) NOT NULL,
+  `Movie_Director_movie_id` INT(11) NOT NULL,
+  PRIMARY KEY (`movie_id`, `person_id`, `Person_id`, `Movie_id`, `Movie_Oscar_movie_id`, `Movie_Oscar_person_id`, `Movie_Director_director_id`, `Movie_Director_movie_id`),
+CONSTRAINT `fk_Oscar_Person1`
+    FOREIGN KEY (`Person_id`)
+    REFERENCES `mydb`.`Person` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Oscar_Movie1`
+    FOREIGN KEY (`Movie_id`)
+    REFERENCES `mydb`.`Movie` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
