@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `mydb`.`Movie` (
+  `id` INT(11) NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `year` YEAR NOT NULL,
+  `rating` VARCHAR(255) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `runtime` VARCHAR(255) NOT NULL,
+  `genre` VARCHAR(255) NOT NULL,
+  `earnings_rank` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`));
