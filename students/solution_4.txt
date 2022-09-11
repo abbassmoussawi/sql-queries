@@ -1,0 +1,1 @@
+SELECT crn FROM `course` where name="bif";
