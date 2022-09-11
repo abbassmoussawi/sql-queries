@@ -1,4 +1,5 @@
 SELECT student.id, course.crn
 FROM student, course, enrolled
-WHERE enrolled.student_id = student.id AND enrolled.course_crn = course.crn
-ORDER BY student.id, course.id;
+WHERE enrolled.student_id = student.id AND enrolled.course_crn = course.crn and course.name= 'CSC275'
+
+ORDER BY course.name;
