@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS `mydb`.`Director` (
+  `director_id` INT(11) NOT NULL,
+  `movie_id` INT(11) NOT NULL,
+  `Movie_id` INT(11) NOT NULL,
+  PRIMARY KEY (`director_id`, `movie_id`, `Movie_id`),
+
+  CONSTRAINT `fk_Director_Movie1`
+    FOREIGN KEY (`Movie_id`)
+    REFERENCES `mydb`.`Movie` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
